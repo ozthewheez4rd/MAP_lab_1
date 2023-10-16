@@ -26,8 +26,16 @@ public class Main {
         int[] numbers = {4, 8, 3, 10, 17};
 
         //Test case for max number
-        int manNum = findMax(numbers);
+        int maxNum = findMax(numbers);
         System.out.println("Max Number: " + maxNum);
+
+        // Test case for min number
+        int minNum = findMin(numbers);
+        System.out.println("Min Number: " + minNum);
+
+        // Test case for min sum of n-1 numbers
+        int minSum = findMinSum(numbers);
+        System.out.println("Min Sum of n-1 Numbers: " + minSum);
     }
 
     public static int[] getInsufficientGrades(int[] grades) {
