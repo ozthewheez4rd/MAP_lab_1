@@ -40,8 +40,27 @@ public class Main {
         // Test case for min sum of n-1 numbers
         int minSum = findMinSum(numbers);
         System.out.println("Min Sum of n-1 Numbers: " + minSum);
-    }
 
+        // Problem 3: BigNumber Operations
+        int[] bigNum1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] bigNum2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+
+        // Test case for addition of big numbers
+        int[] sumResult = addBigNumbers(bigNum1, bigNum2);
+        System.out.println("Sum Result: " + arrayToString(sumResult));
+
+        // Test case for subtraction of big numbers
+        int[] diffResult = subtractBigNumbers(bigNum1, bigNum2);
+        System.out.println("Difference Result: " + arrayToString(diffResult));
+
+        // Test case for multiplication of a big number by a digit
+        int[] multiplyResult = multiplyBigNumberByDigit(bigNum1, 2);
+        System.out.println("Multiplication Result: " + arrayToString(multiplyResult));
+
+        // Test case for division of a big number by a digit
+        int[] divideResult = divideBigNumberByDigit(bigNum1, 2);
+        System.out.println("Division Result: " + arrayToString(divideResult));
+    }
     public static int[] getInsufficientGrades(int[] grades) {
         List<Integer> insufficientGrades = new ArrayList<>();
 
@@ -150,4 +169,39 @@ public class Main {
         sb.append("]");
         return sb.toString();
     }
+    public static int[] addBigNumbers(int[] num1, int[] num2) {
+        int n = num1.length;
+        int[] result = new int[n];
+        int carry = 0;
+
+        for (int i = n - 1; i >= 0; i--) {
+            int sum = num1[i] + num2[i] + carry;
+            result[i] = sum % 10;
+            carry = sum / 10;
+        }
+
+        return result;
+    }
+
+    public static int[] subtractBigNumbers(int[] num1, int[] num2) {
+        int n = num1.length;
+        int[] result = new int[n];
+        int borrow = 0;
+
+        for (int i = n - 1; i >= 0; i--) {
+            int diff = num1[i] - num2[i] - borrow;
+            if (diff < 0) {
+                diff += 10;
+                borrow = 1;
+            } else {
+                borrow = 0;
+            }
+            result[i] = diff;
+        }
+
+        return result;
+    }
+
+
+
 }
