@@ -15,7 +15,7 @@ public class Main {
 
         // Test case for rounded grades
         int[] roundedGrades = getRoundedGrades(grades);
-        System.out.println("Rounded Grades: " + arrayToString(roundedGrades);
+        System.out.printf("Rounded Grades: %s%n", arrayToString(roundedGrades));
 
         // Test case for maximum rounded grade
         int maxRoundedGrade = getMaximumRoundedGrade(grades);
