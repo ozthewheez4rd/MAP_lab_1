@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        //Problem 1: Java University Grades
         int[] grades = {84, 29, 55, 38, 45};
 
         // Test case for insufficient grades
@@ -20,6 +21,13 @@ public class Main {
         // Test case for maximum rounded grade
         int maxRoundedGrade = getMaximumRoundedGrade(grades);
         System.out.println("Max Rounded Grade: " + maxRoundedGrade);
+
+        //Problem 2: Array Operations
+        int[] numbers = {4, 8, 3, 10, 17};
+
+        //Test case for max number
+        int manNum = findMax(numbers);
+        System.out.println("Max Number: " + maxNum);
     }
 
     public static int[] getInsufficientGrades(int[] grades) {
