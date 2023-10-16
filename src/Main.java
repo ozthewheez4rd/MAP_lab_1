@@ -33,6 +33,10 @@ public class Main {
         int minNum = findMin(numbers);
         System.out.println("Min Number: " + minNum);
 
+        // Test case for max sum of n-1 numbers
+        int maxSum = findMaxSum(numbers);
+        System.out.println("Max Sum of n-1 Numbers: " + maxSum);
+
         // Test case for min sum of n-1 numbers
         int minSum = findMinSum(numbers);
         System.out.println("Min Sum of n-1 Numbers: " + minSum);
@@ -92,6 +96,47 @@ public class Main {
             }
         }
         return maxRoundedGrade;
+    }
+    public static int findMax(int[] arr) {
+        int max = Integer.MIN_VALUE;
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
+    }
+
+    public static int findMin(int[] arr) {
+        int min = Integer.MAX_VALUE;
+        for (int num : arr) {
+            if (num < min) {
+                min = num;
+            }
+        }
+        return min;
+    }
+
+    public static int findMaxSum(int[] arr) {
+        int sum = 0;
+        int max = findMax(arr);
+        for (int num : arr) {
+            if (num != max) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    public static int findMinSum(int[] arr) {
+        int sum = 0;
+        int min = findMin(arr);
+        for (int num : arr) {
+            if (num != min) {
+                sum += num;
+            }
+        }
+        return sum;
     }
 
     private static String arrayToString(int[] arr) {
