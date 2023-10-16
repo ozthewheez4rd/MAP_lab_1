@@ -202,6 +202,32 @@ public class Main {
         return result;
     }
 
+    public static int[] multiplyBigNumberByDigit(int[] num, int digit) {
+        int n = num.length;
+        int[] result = new int[n];
+        int carry = 0;
 
+        for (int i = n - 1; i >= 0; i--) {
+            int product = num[i] * digit + carry;
+            result[i] = product % 10;
+            carry = product / 10;
+        }
+
+        return result;
+    }
+
+    public static int[] divideBigNumberByDigit(int[] num, int digit) {
+        int n = num.length;
+        int[] result = new int[n];
+        int remainder = 0;
+
+        for (int i = 0; i < n; i++) {
+            int dividend = num[i] + remainder * 10;
+            result[i] = dividend / digit;
+            remainder = dividend % digit;
+        }
+
+        return result;
+    }
 
 }
