@@ -1,4 +1,5 @@
 public class Problem1 {
+    // Method to find insufficient grades
     public static int[] getInsufficientGrades(int[] grades) {
         int n = grades.length;
         int[] insufficientGrades = new int[n];
@@ -18,6 +19,7 @@ public class Problem1 {
         return result;
     }
 
+    // Method to calculate the average grade
     public static double getAverageGrade(int[] grades) {
         int sum = 0;
         for (int grade : grades) {
@@ -26,6 +28,7 @@ public class Problem1 {
         return (double) sum / grades.length;
     }
 
+    // Method to round grades
     public static int[] getRoundedGrades(int[] grades) {
         int n = grades.length;
         int[] roundedGrades = new int[n];
@@ -46,6 +49,7 @@ public class Problem1 {
         return roundedGrades;
     }
 
+    // Method to find the maximum rounded grade
     public static int getMaximumRoundedGrade(int[] grades) {
         int[] roundedGrades = getRoundedGrades(grades);
         int maxRoundedGrade = Integer.MIN_VALUE;
@@ -59,6 +63,7 @@ public class Problem1 {
         return maxRoundedGrade;
     }
 
+    // Method to test various cases
     public static void tests(int[] grades) {
         // Test case for insufficient grades
         int[] insufficientGrades = getInsufficientGrades(grades);
@@ -83,5 +88,14 @@ public class Problem1 {
         // Test case for maximum rounded grade
         int maxRoundedGrade = getMaximumRoundedGrade(grades);
         System.out.println("Max Rounded Grade: " + maxRoundedGrade);
+
+        // Additional test cases
+        int[] additionalGrades = {35, 42, 37, 39, 58};
+        int[] additionalInsufficientGrades = getInsufficientGrades(additionalGrades);
+        System.out.print("Additional Insufficient Grades: ");
+        for (int grade : additionalInsufficientGrades) {
+            System.out.print(grade + " ");
+        }
+        System.out.println();
     }
 }
