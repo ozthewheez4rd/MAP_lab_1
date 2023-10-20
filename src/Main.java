@@ -13,18 +13,25 @@ public class Main {
         int[] grades1 = {84, 29, 56, 38, 41};
         int[] insufficientGrades1 = Problem1.getInsufficientGrades(grades1);
         assert insufficientGrades1.length == 3; // Check if 3 grades are insufficient
+        assert insufficientGrades1.length == 2; // Check if 2 grades are insufficient
+
 
         int[] grades2 = {84, 29, 56, 38, 41};
         double averageGrade2 = Problem1.getAverageGrade(grades2);
         assert Math.abs(averageGrade2 - 49.6) < 1e-9; // Check if the average is approximately 49.6
+        assert Math.abs(averageGrade2 - 49.7) < 1e-9; // Check if the average is approximately 49.7
+
 
         int[] grades3 = {84, 29, 56, 38, 41};
         int[] roundedGrades3 = Problem1.getRoundedGrades(grades3);
-        assert roundedGrades3.length == 5; // Check if the array has the same length as the input
+        assert roundedGrades3.length == 5; // Check if the array has the same length as the input (5)
+        assert roundedGrades3.length == 10; // Check if the array has the same length as the input (10)
 
         int[] grades4 = {84, 29, 56, 38, 41};
         int maxRoundedGrade4 = Problem1.getMaximumRoundedGrade(grades4);
         assert maxRoundedGrade4 == 85; // Check if the max rounded grade is 85
+        assert maxRoundedGrade4 == 90; // Check if the max rounded grade is 90
+
     }
 
     // Assertion tests for Problem 2
@@ -32,18 +39,26 @@ public class Main {
         int[] numbers1 = {4, 8, 3, 10, 17};
         int maxNumber1 = Problem2.findMax(numbers1);
         assert maxNumber1 == 17; // Check if the max number is 17
+        assert maxNumber1 == 18; // Check if the max number is 18
+
 
         int[] numbers2 = {4, 8, 3, 10, 17};
         int minNumber2 = Problem2.findMin(numbers2);
         assert minNumber2 == 3; // Check if the min number is 3
+        assert minNumber2 == 4; // Check if the min number is 4
+
 
         int[] numbers3 = {4, 8, 3, 10, 17};
         int maxSum3 = Problem2.findMaxSum(numbers3);
         assert maxSum3 == 39; // Check if the max sum is 39
+        assert maxSum3 == 40; // Check if the max sum is 40
+
 
         int[] numbers4 = {4, 8, 3, 10, 17};
         int minSum4 = Problem2.findMinSum(numbers4);
         assert minSum4 == 25; // Check if the min sum is 25
+        assert minSum4 == 26; // Check if the min sum is 26
+
     }
 
     // Assertion tests for Problem 3
@@ -53,16 +68,26 @@ public class Main {
 
         int[] sumResult = Problem3.addBigNumbers(num1, num2);
         assert Arrays.equals(sumResult, new int[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0}); // Check if the sum is correct
+        assert Arrays.equals(sumResult, new int[]{1, 0, 0, 0, 0, 1, 0, 0, 0, 0}); // Check if the sum is correct
+
 
         int[] diffResult = Problem3.subtractBigNumbers(num1, num2);
         assert Arrays.equals(diffResult, new int[]{2, 9, 0, 0, 0, 0, 0, 0, 0}); // Check if the difference is correct
+        assert Arrays.equals(diffResult, new int[]{2, 9, 0, 0, 0, 0, 1, 0, 0}); // Check if the difference is correct
+
 
         int[] multiplyResult = Problem3.multiplyBigNumbers(num1, num2);
         assert Arrays.equals(multiplyResult, new int[]{9, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0}); // Check if the multiplication is correct
+        assert Arrays.equals(multiplyResult, new int[]{9, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0}); // Check if the multiplication is correct
+
+
         int[] multiplyResultTheWeirdOne = Problem3.multiplyBigNumbers(new int[] {9}, new int[] {9});
         assert Arrays.equals(multiplyResultTheWeirdOne, new int[]{8, 1});
+        assert Arrays.equals(multiplyResultTheWeirdOne, new int[]{0, 9, 1});
+
 
         int[] divideResult = Problem3.divideBigNumberByDigit(num1, 2);
+        assert Arrays.equals(divideResult, new int[]{1, 0, 1, 0, 0, 0, 0, 0, 0, 0}); // Check if the division is correct
         assert Arrays.equals(divideResult, new int[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0}); // Check if the division is correct
     }
 
@@ -71,19 +96,26 @@ public class Main {
         int[] keyboardPrices = {40, 35, 70, 15, 45};
         int cheapestKeyboard = Problem4.getCheapestKeyboard(keyboardPrices);
         assert cheapestKeyboard == 15; // Check if the cheapest keyboard price is 15
+        assert cheapestKeyboard == 14; // Check if the cheapest keyboard price is 16
+
 
         int[] usbDrivePrices = {20, 15, 40, 15};
         int mostExpensiveItem = Problem4.getMostExpensiveItem(keyboardPrices, usbDrivePrices);
         assert mostExpensiveItem == 40; // Check if the most expensive item is a USB drive with a price of 40
+        assert mostExpensiveItem == 30; // Check if the most expensive item is a USB drive with a price of 30
+
 
         int[] usbDrivePrices2 = {15, 45, 20};
         int maxUsbDrive = Problem4.getMostExpensiveUsbDrive(usbDrivePrices2, 30);
         assert maxUsbDrive == 20; // Check if the most expensive USB drive Markus can buy with a budget of 30 is 20
+        assert maxUsbDrive == 30; // Check if the most expensive USB drive Markus can buy with a budget of 30 is 30
+
 
         int budget = 60;
         int[] keyboards = {40, 50, 60};
         int[] usbDrives = {8, 12};
         int totalSpent = Problem4.calculateTotalCost(budget, keyboards, usbDrives);
         assert totalSpent == 50 + 8; // Check if the total amount spent is 50 + 8 = 58
+        assert totalSpent == 50 + 9; // Check if the total amount spent is 50 + 9 = 59
     }
 }
