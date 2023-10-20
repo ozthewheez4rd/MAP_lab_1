@@ -80,12 +80,18 @@ public class Problem3 {
     // Helper method to remove leading zeros from an array
     private static int[] removeLeadingZeros(int[] arr) {
         int firstNonZero = 0;
+
+        // Find the index of the first non-zero element in the array
         while (firstNonZero < arr.length && arr[firstNonZero] == 0) {
             firstNonZero++;
         }
+
+        // If all elements are zeros, return an array with a single zero
         if (firstNonZero == arr.length) {
             return new int[]{0}; // Return [0] if the result is zero
         }
+
+        // If there are non-zero elements, create a new array without leading zeros
         return Arrays.copyOfRange(arr, firstNonZero, arr.length);
     }
 
@@ -110,8 +116,8 @@ public class Problem3 {
         // Additional test cases
         int[] additionalBigNum1 = {1, 2, 3, 4, 5};
         int[] additionalBigNum2 = {9, 8, 7, 6, 5};
-        int[] additionalBigNum3 = {7, 5, 0}; // Represents the number 750
-        int[] additionalBigNum4 = {9, 9};    // Represents the number 99
+        int[] additionalBigNum3 = {7, 5, 0};
+        int[] additionalBigNum4 = {9, 9};
         int[] additionalSumResult = addBigNumbers(additionalBigNum1, additionalBigNum2);
         System.out.println("Additional Sum Result: " + Arrays.toString(additionalSumResult));
 
