@@ -41,36 +41,36 @@ public class Problem2 {
         return sum - min;
     }
 
-    // Method to test various cases
-    public static void tests(int[] numbers) {
-        // Test case for maximum number
-        int maxNum = findMax(numbers);
-        System.out.println("Max Number: " + maxNum);
-
-        // Test case for minimum number
-        int minNum = findMin(numbers);
-        System.out.println("Min Number: " + minNum);
-
-        // Test case for maximum sum of n-1 numbers
-        int maxSum = findMaxSum(numbers);
-        System.out.println("Max Sum of n-1 Numbers: " + maxSum);
-
-        // Test case for minimum sum of n-1 numbers
-        int minSum = findMinSum(numbers);
-        System.out.println("Min Sum of n-1 Numbers: " + minSum);
-
-        // Additional test cases
-        int[] additionalNumbers = {7, 3, 10, 2, 1, 8};
-        int additionalMaxNum = findMax(additionalNumbers);
-        System.out.println("Additional Max Number: " + additionalMaxNum);
-
-        int additionalMinNum = findMin(additionalNumbers);
-        System.out.println("Additional Min Number: " + additionalMinNum);
-
-        int additionalMaxSum = findMaxSum(additionalNumbers);
-        System.out.println("Additional Max Sum of n-1 Numbers: " + additionalMaxSum);
-
-        int additionalMinSum = findMinSum(additionalNumbers);
-        System.out.println("Additional Min Sum of n-1 Numbers: " + additionalMinSum);
-    }
+//    // Method to test various cases
+//    public static void tests(int[] numbers) {
+//        // Test case for maximum number
+//        int maxNum = findMax(numbers);
+//        System.out.println("Max Number: " + maxNum);
+//
+//        // Test case for minimum number
+//        int minNum = findMin(numbers);
+//        System.out.println("Min Number: " + minNum);
+//
+//        // Test case for maximum sum of n-1 numbers
+//        int maxSum = findMaxSum(numbers);
+//        System.out.println("Max Sum of n-1 Numbers: " + maxSum);
+//
+//        // Test case for minimum sum of n-1 numbers
+//        int minSum = findMinSum(numbers);
+//        System.out.println("Min Sum of n-1 Numbers: " + minSum);
+//
+//        // Additional test cases
+//        int[] additionalNumbers = {7, 3, 10, 2, 1, 8};
+//        int additionalMaxNum = findMax(additionalNumbers);
+//        System.out.println("Additional Max Number: " + additionalMaxNum);
+//
+//        int additionalMinNum = findMin(additionalNumbers);
+//        System.out.println("Additional Min Number: " + additionalMinNum);
+//
+//        int additionalMaxSum = findMaxSum(additionalNumbers);
+//        System.out.println("Additional Max Sum of n-1 Numbers: " + additionalMaxSum);
+//
+//        int additionalMinSum = findMinSum(additionalNumbers);
+//        System.out.println("Additional Min Sum of n-1 Numbers: " + additionalMinSum);
+//    }
 }

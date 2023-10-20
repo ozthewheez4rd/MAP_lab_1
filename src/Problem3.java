@@ -95,44 +95,44 @@ public class Problem3 {
         return Arrays.copyOfRange(arr, firstNonZero, arr.length);
     }
 
-    // Method to test various cases
-    public static void tests(int[] bigNum1, int[] bigNum2) {
-        // Test case for addition
-        int[] sumResult = addBigNumbers(bigNum1, bigNum2);
-        System.out.println("Sum Result: " + Arrays.toString(sumResult));
-
-        // Test case for subtraction
-        int[] diffResult = subtractBigNumbers(bigNum1, bigNum2);
-        System.out.println("Difference Result: " + Arrays.toString(diffResult));
-
-        // Test case for multiplication
-        int[] multiplyResult = multiplyBigNumbers(bigNum1, bigNum2);
-        System.out.println("Multiplication Result: " + Arrays.toString(multiplyResult));
-
-        // Test case for division
-        int[] divideResult = divideBigNumberByDigit(bigNum1, 2);
-        System.out.printf("Division Result: %s%n", Arrays.toString(divideResult));
-
-        // Additional test cases
-        int[] additionalBigNum1 = {1, 2, 3, 4, 5};
-        int[] additionalBigNum2 = {9, 8, 7, 6, 5};
-        int[] additionalBigNum3 = {7, 5, 0};
-        int[] additionalBigNum4 = {9, 9};
-        int[] additionalSumResult = addBigNumbers(additionalBigNum1, additionalBigNum2);
-        System.out.println("Additional Sum Result: " + Arrays.toString(additionalSumResult));
-
-        int[] additionalDiffResult = subtractBigNumbers(additionalBigNum1, additionalBigNum2);
-        System.out.println("Additional Difference Result: " + Arrays.toString(additionalDiffResult));
-
-        int[] additionalMultiplyResult = multiplyBigNumbers(additionalBigNum1, additionalBigNum2);
-        System.out.println("Additional Multiplication Result: " + Arrays.toString(additionalMultiplyResult));
-
-        int[] additionalDivideResult = divideBigNumberByDigit(additionalBigNum2, 3);
-        System.out.println("Additional Division Result: " + Arrays.toString(additionalDivideResult));
-
-        int[] additionalMultiplyResult2 = multiplyBigNumbers(additionalBigNum3, additionalBigNum4);
-        System.out.println("Additional Multiply Result with 9: " + Arrays.toString(additionalMultiplyResult2));
-
-
-    }
+//    // Method to test various cases
+//    public static void tests(int[] bigNum1, int[] bigNum2) {
+//        // Test case for addition
+//        int[] sumResult = addBigNumbers(bigNum1, bigNum2);
+//        System.out.println("Sum Result: " + Arrays.toString(sumResult));
+//
+//        // Test case for subtraction
+//        int[] diffResult = subtractBigNumbers(bigNum1, bigNum2);
+//        System.out.println("Difference Result: " + Arrays.toString(diffResult));
+//
+//        // Test case for multiplication
+//        int[] multiplyResult = multiplyBigNumbers(bigNum1, bigNum2);
+//        System.out.println("Multiplication Result: " + Arrays.toString(multiplyResult));
+//
+//        // Test case for division
+//        int[] divideResult = divideBigNumberByDigit(bigNum1, 2);
+//        System.out.printf("Division Result: %s%n", Arrays.toString(divideResult));
+//
+//        // Additional test cases
+//        int[] additionalBigNum1 = {1, 2, 3, 4, 5};
+//        int[] additionalBigNum2 = {9, 8, 7, 6, 5};
+//        int[] additionalBigNum3 = {9};
+//        int[] additionalBigNum4 = {9};
+//        int[] additionalSumResult = addBigNumbers(additionalBigNum1, additionalBigNum2);
+//        System.out.println("Additional Sum Result: " + Arrays.toString(additionalSumResult));
+//
+//        int[] additionalDiffResult = subtractBigNumbers(additionalBigNum1, additionalBigNum2);
+//        System.out.println("Additional Difference Result: " + Arrays.toString(additionalDiffResult));
+//
+//        int[] additionalMultiplyResult = multiplyBigNumbers(additionalBigNum1, additionalBigNum2);
+//        System.out.println("Additional Multiplication Result: " + Arrays.toString(additionalMultiplyResult));
+//
+//        int[] additionalDivideResult = divideBigNumberByDigit(additionalBigNum2, 3);
+//        System.out.println("Additional Division Result: " + Arrays.toString(additionalDivideResult));
+//
+//        int[] additionalMultiplyResult2 = multiplyBigNumbers(additionalBigNum3, additionalBigNum4);
+//        System.out.println("Additional Multiply Result with 9: " + Arrays.toString(additionalMultiplyResult2));
+//
+//
+//    }
 }

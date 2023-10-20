@@ -63,39 +63,39 @@ public class Problem1 {
         return maxRoundedGrade;
     }
 
-    // Method to test various cases
-    public static void tests(int[] grades) {
-        // Test case for insufficient grades
-        int[] insufficientGrades = getInsufficientGrades(grades);
-        System.out.print("Insufficient Grades: ");
-        for (int grade : insufficientGrades) {
-            System.out.print(grade + " ");
-        }
-        System.out.println();
-
-        // Test case for average grade
-        double averageGrade = getAverageGrade(grades);
-        System.out.println("Average Grade: " + averageGrade);
-
-        // Test case for rounded grades
-        int[] roundedGrades = getRoundedGrades(grades);
-        System.out.print("Rounded Grades: ");
-        for (int grade : roundedGrades) {
-            System.out.print(grade + " ");
-        }
-        System.out.println();
-
-        // Test case for maximum rounded grade
-        int maxRoundedGrade = getMaximumRoundedGrade(grades);
-        System.out.println("Max Rounded Grade: " + maxRoundedGrade);
-
-        // Additional test cases
-        int[] additionalGrades = {35, 42, 37, 39, 58};
-        int[] additionalInsufficientGrades = getInsufficientGrades(additionalGrades);
-        System.out.print("Additional Insufficient Grades: ");
-        for (int grade : additionalInsufficientGrades) {
-            System.out.print(grade + " ");
-        }
-        System.out.println();
-    }
+//    // Method to test various cases
+//    public static void tests(int[] grades) {
+//        // Test case for insufficient grades
+//        int[] insufficientGrades = getInsufficientGrades(grades);
+//        System.out.print("Insufficient Grades: ");
+//        for (int grade : insufficientGrades) {
+//            System.out.print(grade + " ");
+//        }
+//        System.out.println();
+//
+//        // Test case for average grade
+//        double averageGrade = getAverageGrade(grades);
+//        System.out.println("Average Grade: " + averageGrade);
+//
+//        // Test case for rounded grades
+//        int[] roundedGrades = getRoundedGrades(grades);
+//        System.out.print("Rounded Grades: ");
+//        for (int grade : roundedGrades) {
+//            System.out.print(grade + " ");
+//        }
+//        System.out.println();
+//
+//        // Test case for maximum rounded grade
+//        int maxRoundedGrade = getMaximumRoundedGrade(grades);
+//        System.out.println("Max Rounded Grade: " + maxRoundedGrade);
+//
+//        // Additional test cases
+//        int[] additionalGrades = {35, 42, 37, 39, 58};
+//        int[] additionalInsufficientGrades = getInsufficientGrades(additionalGrades);
+//        System.out.print("Additional Insufficient Grades: ");
+//        for (int grade : additionalInsufficientGrades) {
+//            System.out.print(grade + " ");
+//        }
+//        System.out.println();
+//    }
 }
