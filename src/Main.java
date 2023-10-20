@@ -59,6 +59,8 @@ public class Main {
 
         int[] multiplyResult = Problem3.multiplyBigNumbers(num1, num2);
         assert Arrays.equals(multiplyResult, new int[]{9, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0}); // Check if the multiplication is correct
+        int[] multiplyResultTheWeirdOne = Problem3.multiplyBigNumbers(new int[] {9}, new int[] {9});
+        assert Arrays.equals(multiplyResultTheWeirdOne, new int[]{8, 1});
 
         int[] divideResult = Problem3.divideBigNumberByDigit(num1, 2);
         assert Arrays.equals(divideResult, new int[]{1, 0, 0, 0, 0, 0, 0, 0, 0, 0}); // Check if the division is correct
